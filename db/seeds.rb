@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+def create_fake_article
+  Article.create(title: Faker::Book.title, content: Faker::Lorem.sentence)
+end
+
+articles = (1..10).map { create_fake_article }
