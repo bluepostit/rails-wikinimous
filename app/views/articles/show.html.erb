@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="my-4">
+    <span class="h1"><%= @article.title %></span>
+    <span class="small ml-1"><%= link_to 'Edit', edit_article_path(@article) %></span>
+  </div>
+  <p><%= @article.content %></p>
+  <p><%= link_to "Back to articles list", articles_path %></p>
+</div>
